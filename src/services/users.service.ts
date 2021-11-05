@@ -23,7 +23,7 @@ export class UsersService {
 
     const userToCreate = {
       ...user,
-      role: ["reader", "buyer"],
+      roles: ["reader", "buyer"],
       id: uuid.v4(),
     };
     return this.userDAO.create(userToCreate);

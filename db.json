@@ -107,6 +107,18 @@
             "pages": 310,
             "description": "Get the most out of this foundational reference and improve the productivity of your software teams. This open access book collects the wisdom of the 2017 \"Dagstuhl\" seminar on productivity in software engineering, a meeting of community leaders, who came together with the goal of rethinking traditional definitions and measures of productivity.",
             "website": "https://doi.org/10.1007/978-1-4842-4221-6"
+        },
+        {
+            "isbn": "9781484200769",
+            "title": "Pro Git Po du tout du tout de tout",
+            "subtitle": "Everything you neeed to know about Git su",
+            "author": "Scott Chacon and Ben Straub",
+            "published": "2014-11-18T00:00:00.000Z",
+            "publisher": "Apress; 2nd edition",
+            "pages": 458,
+            "description": "Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro.",
+            "website": "https://git-scm.com/book/en/v2",
+            "id": "80b6350d-dcc6-4071-970c-3a8675bffbda"
         }
     ],
     "users": [
@@ -126,7 +138,7 @@
             "password": "test",
             "lastName": "postman",
             "email": "user1@fake.com",
-            "role": [
+            "roles": [
                 "reader",
                 "buyer"
             ],
@@ -137,9 +149,10 @@
             "password": "test",
             "lastName": "postman",
             "email": "user2@fake.com",
-            "role": [
+            "roles": [
                 "reader",
-                "buyer"
+                "buyer",
+                "saler"
             ],
             "id": "f1110757-c155-45e6-9bf9-405c2a2d10ca"
         }
