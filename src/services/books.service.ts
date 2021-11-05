@@ -43,6 +43,14 @@ export class BooksService {
   }
 
   public addCommentToBook(comment: string, bookId: string): BookModel {
-    return this.bookDAO.addCommentToBook(comment, bookId);
+    const book = this.bookDAO.getByID(bookId);
+    if (!book) {
+      throw new UnknownBookError("unknown book");
+    }
+
+    book.comments = book.comments || [];
+    book.comments.push(comment);
+
+    return this.bookDAO.update(book);
   }
 }

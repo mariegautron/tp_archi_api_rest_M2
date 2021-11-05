@@ -45,11 +45,12 @@ export class BooksDao {
     );
   }
 
-  public addCommentToBook(comment: string, bookId: string): BookModel {
-    const book = this.getByID(bookId);
-    book.comments = book.comments || [];
-    book.comments.push(comment);
-    return book;
+  public addCommentToBook(book: BookModel): BookModel {
+    const index = this.getBooksIndexByID(book.id);
+    if (index > -1) {
+      this.databaseConnection.push(`/books[${index}]`, book, true);
+      return book;
+    }
   }
 
   private getBooksIndexByID(bookID: string): number {
