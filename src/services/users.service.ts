@@ -40,11 +40,19 @@ export class UsersService {
     return this.userDAO.delete(userID);
   }
 
-  public updateUser(user: UserModel): UserModel {
-    const existingUser = this.userDAO.getByID(user.id);
+  public updateUser(
+    user: UserModel,
+    currentUser: UserModel,
+    userID: string
+  ): UserModel {
+    const existingUser = this.userDAO.getByID(userID);
     if (!existingUser) {
       throw new UnknownUserError("unknown user");
     }
+    if (user.id !== currentUser.id && !currentUser.roles?.includes("admin")) {
+      throw new Error("not allowed edit profile !");
+    }
+
     const userToUpdate = {
       ...existingUser,
       ...user,

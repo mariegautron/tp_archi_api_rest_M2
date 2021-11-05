@@ -111,10 +111,10 @@
     ],
     "users": [
         {
-            "firstName": "postman",
+            "firstName": "admin",
             "password": "test",
             "lastName": "postman",
-            "email": "postman@fake.com",
+            "email": "admin@fake.com",
             "roles": [
                 "admin",
                 "reader"
@@ -122,15 +122,26 @@
             "id": "3ffda8e7-06a3-4154-96b6-e39260048200"
         },
         {
-            "firstName": "postman2",
+            "firstName": "user1",
             "password": "test",
             "lastName": "postman",
-            "email": "postman2@fake.com",
+            "email": "user1@fake.com",
             "role": [
                 "reader",
                 "buyer"
             ],
-            "id": "3bbfa1ec-3d96-4683-96ad-5a2b31297162"
+            "id": "d3fb1709-91e7-4984-8294-1a76b467742e"
+        },
+        {
+            "firstName": "user2",
+            "password": "test",
+            "lastName": "postman",
+            "email": "user2@fake.com",
+            "role": [
+                "reader",
+                "buyer"
+            ],
+            "id": "f1110757-c155-45e6-9bf9-405c2a2d10ca"
         }
     ]
 }

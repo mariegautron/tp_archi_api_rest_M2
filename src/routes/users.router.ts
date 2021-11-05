@@ -45,9 +45,10 @@ usersRouter.post("/", (req, res) => {
   }
 });
 
-usersRouter.put("/:userID", (req, res) => {
+usersRouter.put("/:userID", Auth.token, (req: any, res) => {
   try {
-    usersService.updateUser(req.body);
+    const user = usersService.updateUser(req.body, req.user, req.params.userID);
+    res.status(200).send(user);
   } catch (error) {
     res.status(400).send(error.message);
   }
@@ -58,8 +59,6 @@ usersRouter.delete(
   Auth.token,
   Auth.role("admin"),
   (req: any, res) => {
-    console.log(req.user);
-    console.log(req);
     try {
       const userId = usersService.deleteUser(req.params.userID, req.user.id);
       res.status(200).send(userId);
